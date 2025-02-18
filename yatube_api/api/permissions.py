@@ -8,7 +8,7 @@ class IsAuthorOrReadOnly(permissions.BasePermission):
 
     def has_object_permission(self, request, view, obj):
         """
-        Разрешаем безопасные методы (GET, HEAD, OPTIONS) всем пользователям
+        Разрешаем безопасные методы (GET, HEAD, OPTIONS) всем пользователям.
         """
         return (
             request.method in permissions.SAFE_METHODS
