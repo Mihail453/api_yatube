@@ -1,7 +1,7 @@
 from django.contrib.auth import get_user_model
 from django.db import models
 
-from .constants import twenty
+from .constants import Twenty
 
 User = get_user_model()
 
@@ -57,4 +57,4 @@ class Comment(models.Model):
 
     def __str__(self):
         return (
-            f'Ком-ий от {self.author} к {self.post.id}: {self.text[:twenty]}')
+            f'Ком-ий от {self.author} к {self.post.id}: {self.text[:Twenty]}')
